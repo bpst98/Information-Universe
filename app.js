@@ -2,7 +2,8 @@ const express = require('express')
 const app = express()
 // const port = 3000
 
-var server=app.listen(process.env.PORT || 3000, listen)
+var server = app.listen(process.env.PORT || 3000, listen)
+
 function listen() {
     var host = server.address().address;
     var port = server.address().port;
@@ -91,7 +92,7 @@ function magic(text, link = false) {
                 // const yy = $('#content .reflist a', html);
                 // const zz = $('#content .refbegin a', html);
                 // console.log(yy,zz);
-                var not_required_list=[]
+                var not_required_list = []
 
                 for (let i = 0; i < a_elements.length; i++) {
                     var title = a_elements[i].attribs.title;
@@ -104,7 +105,7 @@ function magic(text, link = false) {
                         continue;
                     }
 
-                    if (title.toLowerCase().includes("wikipedia")|| title.toLowerCase().includes("edit")|| title.toLowerCase().includes("oclc")) {
+                    if (title.toLowerCase().includes("wikipedia") || title.toLowerCase().includes("edit") || title.toLowerCase().includes("bibcode") || title.toLowerCase().includes("help") || title.toLowerCase().includes("oclc")|| title.toLowerCase().includes("arxiv")) {
                         continue;
                     }
 
